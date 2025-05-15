@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useTheme } from '../../ThemeProvider';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
 const Hero = () => {
   const { theme } = useTheme();
 
@@ -28,10 +29,10 @@ const Hero = () => {
       initial={{ opacity: 0, y: 40 }}
       animate={controls}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 md:flex-row md:gap-12"
+      className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 py-8 md:flex-row md:gap-12"
     >
       {/* Text Content */}
-      <div className="z-10 flex w-full flex-col items-center gap-6 md:w-1/2 md:items-start md:gap-8">
+      <div className="z-20 flex w-full flex-col items-center gap-6 md:w-1/2 md:items-start md:gap-8">
         <h1
           className={`text-center text-3xl font-bold leading-tight tracking-tight md:text-left md:text-4xl lg:text-5xl xl:text-6xl ${textPrimary}`}
         >
@@ -52,6 +53,7 @@ const Hero = () => {
             href="/Rajeev_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            role="button"
             className={`mt-4 flex items-center gap-2 rounded-lg ${buttonBg} px-4 py-3 text-sm font-medium text-white transition-transform hover:scale-105 ${buttonBgHover} focus:outline-none focus:ring-2 ${buttonFocusRing} focus:ring-offset-2 md:text-base`}
             aria-label="View Rajeev Kavala's resume"
           >
@@ -84,7 +86,7 @@ const Hero = () => {
           alt="Portrait of Rajeev Kavala"
           width={380}
           height={440}
-          className="relative z-10 mx-auto h-[440px] w-[380px] rounded-xl object-cover shadow-lg md:mr-4"
+          className="relative z-10 mx-auto h-[440px] w-[380px] rounded-xl object-cover shadow-lg md:mr-4 pointer-events-none"
           priority={true}
         />
       </div>
