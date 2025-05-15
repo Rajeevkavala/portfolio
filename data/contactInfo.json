@@ -1,0 +1,35 @@
+{
+  "contacts": [
+    {
+      "id": "email",
+      "label": "Email",
+      "value": "your.email@example.com",
+      "href": "mailto:rajeevkavala37@gmail.com",
+      "icon": "envelope"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "value": "linkedin.com/in/rajeevkavala",
+      "href": "https://linkedin.com/in/rajeevkavala",
+      "icon": "link",
+      "external": true
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "value": "github.com/RajeevKavala",
+      "href": "https://github.com/RajeevKavala",
+      "icon": "github",
+      "external": true
+    },
+    {
+      "id": "twitter",
+      "label": "Twitter",
+      "value": "twitter.com/RajeevKava28901",
+      "href": "https://x.com/RajeevKava28901",
+      "icon": "twitter",
+      "external": true
+    }
+  ]
+}
