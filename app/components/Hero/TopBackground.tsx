@@ -16,13 +16,13 @@ const icons = [
   {
     src: '/bracket_icon.svg',
     alt: 'bracket icon',
-    className: 'top-[160px] left-2 md:top-85 md:left-105',
+    className: 'top-[200px] left-2 md:top-85 md:left-105',
     visible: 'block',
   },
   {
     src: '/github_icon.svg',
     alt: 'github icon',
-    className: 'top-[230px] left-[40%] md:top-[570px] md:left-[700px]',
+    className: 'top-[230px] left-[90%] md:top-[570px] md:left-[700px]',
     visible: 'block',
   },
   {

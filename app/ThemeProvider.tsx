@@ -58,13 +58,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         {/* Custom toggle switch */}
         <label
-          className="relative inline-flex items-center cursor-pointer"
-          style={{
-            position: 'fixed',
-            top: 50,
-            right: 20,
-            zIndex: 1000,
-          }}
+          className="
+            fixed top-12 z-[1000]
+            left-2 md:left-auto md:right-5
+            inline-flex items-center cursor-pointer
+          "
         >
           <input
             type="checkbox"
@@ -87,6 +85,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
               peer-checked:after:translate-x-10
               peer-checked:after:content-['🌙']
               after:shadow-md after:text-lg
+              relative
             "
           ></div>
         </label>
