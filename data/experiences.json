@@ -1,14 +1,14 @@
 [
   {
     "logo": "/AICTE-Logo.webp",
-    "company": "EY Global Delivery Services (via AICTE Internship)",
+    "company": "EY Global Delivery Services (via AICTE)",
     "role": "Web Developer Intern",
     "duration": "Dec 2024 - Jan 2025",
     "description": [
-      "🛠️ Built a modern web application using the MERN stack as part of a 6-week internship.",
-      "👥 Implemented user authentication and admin panel functionalities.",
-      "💳 Integrated PayPal and Razorpay for seamless payment processing.",
-      "🏆 Ranked in the Top 10 out of 100+ projects for functionality and user experience."
+      "Built a MERN-stack web application as part of a 6-week internship program.",
+      "Implemented user authentication and admin panel functionalities.",
+      "Integrated PayPal and Razorpay payment gateways for secure transactions.",
+      "Ranked Top 10 out of 100+ projects for functionality and user experience."
     ]  
   }
 ]

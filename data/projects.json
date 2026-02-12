@@ -1,12 +1,12 @@
 [
   {
     "thumbnail": "/noteaura.png",
-    "title": "NoteAura – AI Note-Taking SaaS",
+    "title": "NoteAura — AI Knowledge Platform",
     "link": {
       "label": "NoteAura",
       "url": "https://noteaura.vercel.app/"
     },
-    "description": "Developed a productivity SaaS with AI-based summarization, PDF Q&A, note management, and MCQ generation. Integrated role-based auth and payments via Razorpay.",
+    "description": "Built a SaaS application enabling users to summarize PDFs, ask context-aware questions, and generate study material using LLMs. Implemented document chunking and semantic search with LangChain, designed role-based authentication and subscription workflows, and integrated Razorpay for payment processing.",
     "languageIcons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
       "/Langchain.svg",
@@ -17,28 +17,26 @@
   },
   {
     "thumbnail": "/clicknbuy_thumbnail.png",
-    "title": "ClickNBuy – E-Commerce Platform",
+    "title": "ClickNBuy — E-Commerce Platform",
     "link": {
       "label": "ClickNBuy",
       "url": "https://clicknbuy-frontend.onrender.com/"
     },
-    "description": "Built a full-stack e-commerce site with payments via PayPal and Razorpay. Implemented order tracking, filtering, and product management.",
+    "description": "Built a full-stack e-commerce platform with secure authentication and order management. Implemented PayPal and Razorpay payment gateways, designed REST APIs for product and order management, and built responsive frontend using React.",
     "languageIcons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-      "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
-      "/razorpay.svg"
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
     ]
   },
   {
     "thumbnail": "/codemasters_thumbnail.png",
-    "title": "CodeMasters – E-Learning Platform",
+    "title": "CodeMasters — E-Learning Platform",
     "link": {
       "label": "CodeMasters",
       "url": "https://codemasters-two.vercel.app/"
     },
-    "description": "Developed an LMS with AI-powered doubt resolution and intelligent search. Managed 50+ users and handled 100+ queries effectively.",
+    "description": "Developed an LMS platform with AI-powered doubt resolution and intelligent search. Supported 50+ active users with 100+ AI-assisted queries. Integrated Firebase authentication and built scalable backend services with Spring Boot.",
     "languageIcons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
@@ -48,12 +46,12 @@
   },
   {
     "thumbnail": "/tic-tac-toe.svg",
-    "title": "TicTacToe AI – Web Game",
+    "title": "TicTacToe AI — Browser Game",
     "link": {
       "label": "TicTacToe AI",
       "url": "https://cerulean-kashata-f62a56.netlify.app/"
     },
-    "description": "Created a responsive browser-based game with an AI opponent using intelligent move prediction. Played over 100 times.",
+    "description": "Built a browser-based game featuring an AI opponent using rule-based move prediction logic. Designed responsive UI and implemented game state management with vanilla JavaScript.",
     "languageIcons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",

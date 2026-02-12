@@ -1,96 +1,255 @@
 'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
-import React, { useEffect } from 'react';
-import { useTheme } from '../../ThemeProvider';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+import { BentoCard } from './BentoCard';
+import { SplitText } from './SplitText';
+import { CountUp } from './CountUp';
+import { Aurora } from './Aurora';
+import { Github, Linkedin, Mail, ArrowRight, Copy, Check } from 'lucide-react';
+import { toast } from 'sonner';
+
+const socialLinks = [
+  { icon: Github, href: 'https://github.com/Rajeevkavala', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/rajeevkavala/', label: 'LinkedIn' },
+];
 
 const Hero = () => {
-  const { theme } = useTheme();
+  const [copied, setCopied] = useState(false);
+  const email = 'rajeevkavala37@gmail.com';
 
-  const textPrimary = theme === 'dark' ? 'text-white' : 'text-gray-900';
-  const textSecondary = theme === 'dark' ? 'text-gray-300' : 'text-gray-600';
-  const buttonBg = theme === 'dark' ? 'bg-primary' : 'bg-primary';
-  const buttonBgHover = theme === 'dark' ? 'hover:bg-primary' : 'hover:bg-primary';
-  const buttonFocusRing = theme === 'dark' ? 'focus:ring-blue-500' : 'focus:ring-blue-400';
+  const copyEmail = async () => {
+    await navigator.clipboard.writeText(email);
+    setCopied(true);
+    toast.success('Email copied to clipboard!');
+    setTimeout(() => setCopied(false), 2000);
+  };
 
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+    },
+  };
 
-  useEffect(() => {
-    if (inView) {
-      controls.start({ opacity: 1, y: 0 });
-    }
-  }, [controls, inView]);
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+    },
+  };
 
   return (
-    <motion.section
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={controls}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 py-8 md:flex-row md:gap-12"
-    >
-      {/* Text Content */}
-      <div className="z-20 flex w-full flex-col items-center gap-6 md:w-1/2 md:items-start md:gap-8">
-        <h1
-          className={`text-center text-3xl font-bold leading-tight tracking-tight md:text-left md:text-4xl lg:text-5xl xl:text-6xl ${textPrimary}`}
-        >
-          <span className="mr-2 inline-block animate-wave">👋</span>
-          Hello, I&apos;m Rajeev Kavala
-          <span className="mt-3 block highlight text-4xl w-fit md:mt-4 md:text-3xl lg:text-4xl xl:text-5xl">
-            Full Stack Developer
-          </span>
-        </h1>
-        <p
-          className={`text-center text-base ${textSecondary} md:text-left md:text-lg lg:text-xl max-w-md`}
-        >
-          Passionate about crafting intelligent web solutions that bridge technology and real-world
-          impact.
-        </p>
-        <div className="flex gap-4">
-          <a
-            href="/Rajeev_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            role="button"
-            className={`mt-4 flex items-center gap-2 rounded-lg ${buttonBg} px-4 py-3 text-sm font-medium text-white transition-transform hover:scale-105 ${buttonBgHover} focus:outline-none focus:ring-2 ${buttonFocusRing} focus:ring-offset-2 md:text-base`}
-            aria-label="View Rajeev Kavala's resume"
-          >
-            Resume
-            <Image
-              src="https://cdn.jsdelivr.net/npm/heroicons@2.0.13/24/outline/document-text.svg"
-              alt=""
-              width={16}
-              height={16}
-              className="inline-block"
-              aria-hidden="true"
-            />
-          </a>
-        </div>
-      </div>
+    <section className="relative min-h-screen pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+      <Aurora className="opacity-60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background pointer-events-none" />
 
-      {/* Image Content */}
-      <div className="relative mt-10 w-full md:mt-0 md:w-1/2">
-        <Image
-          src={theme === 'dark' ? '/profile_dark_purple.png' : '/profile_light_purple.png'}
-          alt="Decorative background shape"
-          width={400}
-          height={460}
-          className="absolute right-0 -z-10 h-[460px] w-[400px] hidden md:block pointer-events-none"
-          priority={false}
-          loading="lazy"
-        />
-        <Image
-          src="/Rajeevkavala.png"
-          alt="Portrait of Rajeev Kavala"
-          width={380}
-          height={440}
-          className="relative z-10 mx-auto h-[440px] w-[380px] rounded-xl object-cover shadow-lg md:mr-4 pointer-events-none"
-          priority={true}
-        />
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Main Title */}
+          <motion.div variants={itemVariants} className="md:col-span-2 md:row-span-2">
+            <BentoCard className="h-full p-8 md:p-12 flex flex-col justify-between min-h-[400px]">
+              <div>
+                <span className="text-label mb-6 block">SOFTWARE ENGINEER</span>
+
+                <h1 className="text-hero mb-2">
+                  <SplitText text="RAJEEV" delay={0.3} staggerDelay={0.05} />
+                </h1>
+
+                <h2 className="text-2xl md:text-3xl font-heading font-semibold text-text-secondary mb-6">
+                  KAVALA
+                </h2>
+
+                <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-lg">
+                  I build scalable, production-ready web applications and AI-driven systems
+                  using modern JavaScript frameworks and backend technologies.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-4 mt-8">
+                <motion.a
+                  href="#projects"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-medium hover:bg-primary-hover hover:-translate-y-0.5 transition-all"
+                >
+                  View Engineering Projects
+                  <ArrowRight size={18} />
+                </motion.a>
+
+                <motion.a
+                  href="/Rajeev_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border-hover text-text-primary font-medium hover:border-primary hover:text-primary hover:-translate-y-0.5 transition-all"
+                >
+                  Download Resume
+                </motion.a>
+              </div>
+            </BentoCard>
+          </motion.div>
+
+        {/* Avatar + Stats */}
+        <motion.div variants={itemVariants}>
+          <BentoCard className="h-full p-6 flex flex-col min-h-[240px]">
+
+            {/* Top Spacer */}
+            <div className="flex-1" />
+
+            {/* Avatar (True Center) */}
+            <div className="flex justify-center">
+              <div className="relative w-24 h-24 md:w-28 md:h-28">
+                {/* Soft ring */}
+                <div className="absolute inset-0 rounded-full ring-2 ring-primary/20" />
+                <Image
+                  src="/Rajeevkavala.png"
+                  alt="Rajeev Kavala"
+                  width={112}
+                  height={112}
+                  className="relative z-10 w-full h-full rounded-full object-cover"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Bottom Spacer */}
+            <div className="flex-1" />
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="flex justify-center gap-12 w-full mt-2"
+            >
+              <div className="text-center">
+                <span className="block text-2xl font-semibold text-text-primary">
+                  <CountUp end={6} suffix="+" />
+                </span>
+                <span className="block mt-1 text-[11px] text-text-tertiary tracking-wide">
+                  Engineering<br />Projects
+                </span>
+              </div>
+
+              <div className="text-center">
+                <span className="block text-2xl font-semibold text-text-primary">
+                  <CountUp end={2} suffix="+" />
+                </span>
+                <span className="block mt-1 text-[11px] text-text-tertiary tracking-wide">
+                  Years<br />Building Products
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Social Links */}
+            <div className="flex justify-center gap-3 mt-4">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  title={label}
+                  className="p-2 rounded-full bg-background-tertiary text-text-secondary
+                            hover:text-primary hover:bg-primary/10 hover:scale-110
+                            transition-all duration-300"
+                >
+                  <Icon size={16} />
+                </a>
+              ))}
+            </div>
+
+          </BentoCard>
+        </motion.div>
+
+
+          {/* CTA */}
+          <motion.div variants={itemVariants}>
+            <BentoCard className="h-full p-6 flex flex-col justify-between min-h-[200px]">
+              <div>
+                <span className="text-sm text-text-tertiary">Currently</span>
+                <h3 className="text-lg font-bold text-text-primary mt-1">
+                  Open to <span className="text-primary">Opportunities</span>
+                </h3>
+                <p className="text-xs text-text-tertiary mt-2">
+                  Seeking SDE Intern / Entry-Level Software Engineer roles
+                </p>
+              </div>
+
+              <button
+                onClick={copyEmail}
+                className="flex items-center justify-between w-full px-4 py-3 mt-4 bg-background-tertiary rounded-xl hover:ring-1 hover:ring-primary/30 transition-all"
+              >
+                <span className="flex items-center gap-2 text-sm truncate">
+                  <Mail size={16} />
+                  {email}
+                </span>
+                {copied ? <Check size={16} className="text-green-500" /> : <Copy size={16} />}
+              </button>
+            </BentoCard>
+          </motion.div>
+
+          {/* Focus */}
+          <motion.div variants={itemVariants}>
+            <BentoCard className="h-full p-6 min-h-[200px]">
+              <span className="text-sm text-text-tertiary">Focus Area</span>
+
+              <h3 className="text-lg font-bold text-text-primary mt-1 mb-4">
+                Full-Stack Engineering with AI
+              </h3>
+
+              <ul className="space-y-2 text-xs text-text-secondary">
+                <li className="flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-primary" />
+                  End-to-end web applications
+                </li>
+
+                <li className="flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-primary" />
+                  AI features (chat, PDF Q&A, automation)
+                </li>
+
+                <li className="flex items-center gap-2">
+                  <span className="w-1 h-1 rounded-full bg-primary" />
+                  Scalable frontend & backend systems
+                </li>
+              </ul>
+            </BentoCard>
+          </motion.div>
+
+
+          {/* Tech Stack */}
+          <motion.div variants={itemVariants}>
+            <BentoCard className="h-full p-6 min-h-[200px]">
+              <span className="text-sm text-text-tertiary">Tech Stack</span>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind'].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 text-xs rounded-full bg-background-tertiary border border-border text-text-secondary hover:border-primary/50 hover:text-primary transition-all"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </BentoCard>
+          </motion.div>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

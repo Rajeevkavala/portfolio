@@ -1,0 +1,405 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Import Tailwind config for v4 compatibility */
+@config "../tailwind.config.ts";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ========================================
+   PREMIUM PORTFOLIO DESIGN SYSTEM
+   Coral/Red Primary with Warm Dark Theme
+======================================== */
+
+:root {
+  /* Primary Colors - Coral/Red */
+  --primary: #E54D4D;
+  --primary-hover: #FF6B6B;
+  --primary-muted: #C94444;
+  
+  /* Background Colors */
+  --background: #0A0A0A;
+  --background-secondary: #111111;
+  --background-tertiary: #1A1A1A;
+  
+  /* Border Colors */
+  --border: #222222;
+  --border-hover: #333333;
+  
+  /* Text Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --text-tertiary: #666666;
+  --text-accent: #E54D4D;
+  
+  /* Accent Colors */
+  --accent-gold: #C9A962;
+  --accent-purple: #8B5CF6;
+  --accent-blue: #3B82F6;
+  
+  /* Typography */
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-inter), -apple-system, sans-serif;
+  --font-script: var(--font-caveat), cursive;
+  --font-mono: var(--font-mono), 'Fira Code', monospace;
+  
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 5rem;
+  --space-16: 8rem;
+  --space-20: 10rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 2.5rem;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Shadows */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 60px rgba(229, 77, 77, 0.15);
+  
+  /* Legacy support */
+  --radius: 0.625rem;
+  --foreground: var(--text-primary);
+  --card: var(--background-secondary);
+  --card-foreground: var(--text-primary);
+  --popover: var(--background-secondary);
+  --popover-foreground: var(--text-primary);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--background-tertiary);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--background-tertiary);
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--background-tertiary);
+  --accent-foreground: var(--text-primary);
+  --destructive: #DC2626;
+  --input: var(--background-tertiary);
+  --ring: var(--primary);
+}
+
+/* ========================================
+   COMPONENT STYLES
+======================================== */
+
+@layer components {
+  /* Card Styles */
+  .card-base {
+    @apply bg-background-secondary border border-border rounded-xl transition-all duration-300;
+  }
+  
+  .card-base:hover {
+    @apply border-border-hover -translate-y-1;
+  }
+  
+  .card-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-full font-medium 
+           transition-all duration-300 hover:bg-primary-hover hover:scale-[1.02]
+           hover:shadow-[0_8px_24px_rgba(229,77,77,0.3)];
+  }
+  
+  .btn-outline {
+    @apply border border-primary text-primary px-6 py-3 rounded-full font-medium
+           transition-all duration-300 hover:bg-primary hover:text-white hover:scale-[1.02];
+  }
+  
+  .btn-ghost {
+    @apply text-text-secondary px-4 py-2 rounded-lg transition-colors duration-200
+           hover:text-text-primary hover:bg-background-tertiary;
+  }
+  
+  /* Section Styles */
+  .section {
+    @apply py-20 md:py-32;
+  }
+  
+  .section-compact {
+    @apply py-12 md:py-20;
+  }
+  
+  /* Container */
+  .container-custom {
+    @apply max-w-[1400px] mx-auto px-6 md:px-8;
+  }
+  
+  /* Typography */
+  .text-hero {
+    font-family: var(--font-heading);
+    @apply text-5xl md:text-7xl lg:text-8xl font-normal leading-none tracking-tight;
+  }
+  
+  .text-h1 {
+    font-family: var(--font-heading);
+    @apply text-4xl md:text-5xl lg:text-6xl font-normal leading-tight;
+  }
+  
+  .text-h2 {
+    font-family: var(--font-heading);
+    @apply text-3xl md:text-4xl font-normal leading-snug;
+  }
+  
+  .text-h3 {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+  }
+  
+  .text-script {
+    font-family: var(--font-script);
+    @apply text-primary;
+  }
+  
+  .text-label {
+    @apply text-xs font-medium tracking-widest uppercase text-text-tertiary;
+  }
+  
+  /* Skill Pills */
+  .skill-pill {
+    @apply bg-background-tertiary border border-border-hover px-4 py-2 rounded-full
+           text-sm text-text-secondary transition-all duration-300
+           hover:border-primary hover:text-text-primary hover:-translate-y-0.5
+           hover:shadow-[0_8px_24px_rgba(229,77,77,0.15)];
+  }
+  
+  /* Nav Link */
+  .nav-link {
+    @apply text-text-secondary text-sm font-medium transition-colors duration-200
+           hover:text-text-primary;
+  }
+  
+  /* Link with underline animation */
+  .link-underline {
+    @apply relative;
+  }
+  
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300;
+  }
+  
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+======================================== */
+
+@layer utilities {
+  /* Colors */
+  .bg-background {
+    background-color: var(--background);
+  }
+  .bg-background-secondary {
+    background-color: var(--background-secondary);
+  }
+  .bg-background-tertiary {
+    background-color: var(--background-tertiary);
+  }
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .bg-primary-hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .text-text-primary {
+    color: var(--text-primary);
+  }
+  .text-text-secondary {
+    color: var(--text-secondary);
+  }
+  .text-text-tertiary {
+    color: var(--text-tertiary);
+  }
+  .text-primary {
+    color: var(--primary);
+  }
+  
+  .border-border {
+    border-color: var(--border);
+  }
+  .border-border-hover {
+    border-color: var(--border-hover);
+  }
+  .border-primary {
+    border-color: var(--primary);
+  }
+  
+  /* Font Families */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .font-script {
+    font-family: var(--font-script);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  
+  /* Gradients */
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(229, 77, 77, 0.15) 0%, transparent 50%);
+  }
+  
+  /* Animations */
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease forwards;
+  }
+  
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+}
+
+/* ========================================
+   KEYFRAMES
+======================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(229, 77, 77, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(229, 77, 77, 0.4);
+  }
+}
+
+/* ========================================
+   THEME INLINE VARIABLES
+======================================== */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+/* ========================================
+   BASE LAYER
+======================================== */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-body antialiased;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-hover);
+    border-radius: var(--radius-full);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-tertiary);
+  }
+  
+  /* Focus states */
+  :focus-visible {
+    @apply outline-2 outline-offset-2;
+    outline-color: var(--primary);
+  }
+  
+  /* Selection */
+  ::selection {
+    background: rgba(229, 77, 77, 0.3);
+    color: var(--text-primary);
+  }
+}

@@ -1,13 +1,13 @@
-import TopBackground from "./components/Hero/TopBackground";
 import Navbar from "./components/Navbar";
 import Sections from "./components/Sections";
+import ScrollToTop from "./components/ui/ScrollToTop";
 
 export default function Home() {
   return (
-    <div className="relative overflow-clip" id="home">
-      <Sections />
+    <div className="relative overflow-clip bg-background" id="home">
       <Navbar />
-      <TopBackground />
+      <Sections />
+      <ScrollToTop />
     </div>
   );
 }

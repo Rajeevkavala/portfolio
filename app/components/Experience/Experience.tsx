@@ -11,7 +11,7 @@ type Props = {
 
 const Experience = ({ logo, company, role, duration, description }: Props) => {
   return (
-    <div className="card flex flex-col items-stretch w-full max-w-[758px] p-5 md:p-[18px] gap-[30px] bg-[#1a1a1a] rounded-lg shadow-lg">
+    <div className="card flex flex-col items-stretch w-full max-w-[758px] p-5 md:p-[18px] gap-[30px] bg-background-secondary rounded-lg shadow-lg">
       <div className="flex items-center gap-4">
         <Image
           src={logo}
