@@ -12,12 +12,24 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
   },
   {
+    "name": "TypeScript",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+  },
+  {
+    "name": "Java",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+  },
+  {
     "name": "React",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
   },
   {
     "name": "Tailwind CSS",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+  },
+  {
+    "name": "Framer Motion",
+    "icon": "https://www.vectorlogo.zone/logos/framer/framer-icon.svg"
   },
   {
     "name": "Next.js",
@@ -40,8 +52,24 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
   },
   {
+    "name": "PostgreSQL",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+  },
+  {
     "name": "Firebase",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+  },
+  {
+    "name": "Prisma",
+    "icon": "/prisma.svg"
+  },
+  {
+    "name": "Redis",
+    "icon": "/redis.svg"
+  },
+  {
+    "name": "Docker",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
   },
   {
     "name": "Git",
@@ -56,20 +84,12 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
   },
   {
-    "name": "VS Code",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+    "name": "Vercel",
+    "icon": "/vercel.svg"
   },
   {
-    "name": "IntelliJ IDEA",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
-  },
-  {
-    "name": "PayPal",
-    "icon": "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg"
-  },
-  {
-    "name": "Razorpay",
-    "icon": "/razorpay.svg"
+    "name": "DigitalOcean",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
   },
   {
     "name": "LangChain",
@@ -78,5 +98,9 @@
   {
     "name": "Gemini",
     "icon": "/gemini-color.svg"
+  },
+  {
+    "name": "OpenAI",
+    "icon": "/openai.svg"
   }
 ]

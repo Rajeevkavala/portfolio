@@ -1,18 +1,34 @@
 [
   {
+    "thumbnail": "/resumebuddy.png",
+    "title": "ResumeBuddy — AI Resume SaaS",
+    "link": {
+      "label": "ResumeBuddy",
+      "url": "https://www.resume-buddy.tech/"
+    },
+    "description": "Built an AI-powered resume platform for ATS analysis, resume improvement, interview preparation, and PDF export. Designed clean, responsive UI and implemented structured workflows for resume creation and user-friendly editing. Optimized backend performance with Redis caching and deployed production-ready services on Vercel + DigitalOcean.",
+    "languageIcons": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+      "/redis.svg"
+    ]
+  },
+  {
     "thumbnail": "/noteaura.png",
-    "title": "NoteAura — AI Knowledge Platform",
+    "title": "NoteAura — AI Note-Taking SaaS",
     "link": {
       "label": "NoteAura",
       "url": "https://noteaura.vercel.app/"
     },
-    "description": "Built a SaaS application enabling users to summarize PDFs, ask context-aware questions, and generate study material using LLMs. Implemented document chunking and semantic search with LangChain, designed role-based authentication and subscription workflows, and integrated Razorpay for payment processing.",
+    "description": "Built AI-powered SaaS for note summarization, PDF Q&A, and MCQ generation. Developed a responsive and mobile-friendly interface with scalable AI workflows and modern product design. Integrated LangChain for document processing and Gemini API for intelligent content generation.",
     "languageIcons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
       "/Langchain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
       "/gemini-color.svg",
-      "/razorpay.svg"
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
     ]
   },
   {
@@ -22,40 +38,13 @@
       "label": "ClickNBuy",
       "url": "https://clicknbuy-frontend.onrender.com/"
     },
-    "description": "Built a full-stack e-commerce platform with secure authentication and order management. Implemented PayPal and Razorpay payment gateways, designed REST APIs for product and order management, and built responsive frontend using React.",
+    "description": "Built a responsive e-commerce application with authentication, cart, orders, and payment workflows. Created reusable frontend components and focused on smooth user flows, usability, and mobile-friendly shopping experience.",
     "languageIcons": [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-    ]
-  },
-  {
-    "thumbnail": "/codemasters_thumbnail.png",
-    "title": "CodeMasters — E-Learning Platform",
-    "link": {
-      "label": "CodeMasters",
-      "url": "https://codemasters-two.vercel.app/"
-    },
-    "description": "Developed an LMS platform with AI-powered doubt resolution and intelligent search. Supported 50+ active users with 100+ AI-assisted queries. Integrated Firebase authentication and built scalable backend services with Spring Boot.",
-    "languageIcons": [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-    ]
-  },
-  {
-    "thumbnail": "/tic-tac-toe.svg",
-    "title": "TicTacToe AI — Browser Game",
-    "link": {
-      "label": "TicTacToe AI",
-      "url": "https://cerulean-kashata-f62a56.netlify.app/"
-    },
-    "description": "Built a browser-based game featuring an AI opponent using rule-based move prediction logic. Designed responsive UI and implemented game state management with vanilla JavaScript.",
-    "languageIcons": [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
     ]
   }
 ]
