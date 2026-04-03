@@ -109,6 +109,7 @@ const ExperienceCard = ({
             href="https://drive.google.com/file/d/1c_yIutHNSBou-UQ2EVqvwqq_Ma3nzZRV/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`View Certificate for ${experience.role} at ${experience.company} (opens in a new tab)`}
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-hover transition-colors"
           >
             View Certificate

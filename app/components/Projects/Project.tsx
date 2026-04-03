@@ -129,6 +129,7 @@ const ProjectCard = ({
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Live Demo for ${title} (opens in a new tab)`}
                 className={cn(
                   "inline-flex items-center gap-2 px-5 py-2.5 rounded-full cursor-pointer",
                   "bg-primary text-white font-medium text-sm",
@@ -146,6 +147,7 @@ const ProjectCard = ({
                   href={github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Source Code for ${title} on GitHub (opens in a new tab)`}
                   className={cn(
                     "inline-flex items-center gap-2 px-5 py-2.5 rounded-full cursor-pointer",
                     "border border-border-hover text-text-primary font-medium text-sm",
@@ -242,6 +244,7 @@ const ProjectCard = ({
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`View Project: ${title} (opens in a new tab)`}
           className="inline-flex items-center gap-1.5 text-sm font-medium cursor-pointer text-primary hover:text-primary-hover hover:gap-2 transition-all duration-300"
         >
           View Project
