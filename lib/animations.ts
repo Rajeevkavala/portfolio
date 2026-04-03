@@ -1,7 +1,7 @@
 // lib/animations.ts
 // Framer Motion animation variants
 
-export const fadeUpVariants = {
+export const fadeUpVariants: import('framer-motion').Variants = {
   hidden: { 
     opacity: 0, 
     y: 30 

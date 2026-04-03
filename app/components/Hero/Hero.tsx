@@ -34,7 +34,7 @@ const Hero = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: import('framer-motion').Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -90,6 +90,7 @@ const Hero = () => {
                   href="/Rajeev_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Download Resume (opens in a new tab)"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border-hover text-text-primary font-medium hover:border-primary hover:text-primary hover:-translate-y-0.5 transition-all"

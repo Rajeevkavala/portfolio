@@ -32,7 +32,12 @@ const Experience = ({ logo, company, role, duration, description }: Props) => {
             <li key={index}>{point}</li>
           ))}
         </ul>
-        <a href="https://drive.google.com/file/d/1c_yIutHNSBou-UQ2EVqvwqq_Ma3nzZRV/view?usp=sharing" target='_blank'>
+        <a
+          href="https://drive.google.com/file/d/1c_yIutHNSBou-UQ2EVqvwqq_Ma3nzZRV/view?usp=sharing"
+          target='_blank'
+          rel="noopener noreferrer"
+          aria-label={`View Certificate for ${role} at ${company} (opens in a new tab)`}
+        >
           📄 [View Certificate]
         </a>
       </div>
